@@ -1,0 +1,6 @@
+{
+  "name": "RoboWare",
+  "description": "Autonomous multi-agent warehouse simulation combining A* pathfinding, Q-learning, collision avoidance, charging traffic management, and live order demand.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
