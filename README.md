@@ -1,7 +1,3 @@
-UI MOCKUP 
-
-ASCI FORMAT
-
 +--------------------------------------------------------------------------------------------------+
 |  [ (o) RoboWare OS | Tick #142 | Ep #12 ]   [ Mode: Hybrid (A* + Q) v ]   [Paths] [Heatmap]      |
 |  (Top-Left Floating Clay Pill)                                                                   |
