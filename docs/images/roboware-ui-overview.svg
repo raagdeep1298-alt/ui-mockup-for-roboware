@@ -1,0 +1,354 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E2E5E9" stroke-width="0.8" />
+    </pattern>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#3c4043" flood-opacity="0.15" />
+    </filter>
+    <filter id="shadow-md" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#3c4043" flood-opacity="0.18" />
+    </filter>
+    <filter id="shadow-lg" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#3c4043" flood-opacity="0.16" />
+    </filter>
+    <!-- Heading Cones -->
+    <linearGradient id="cone-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A73E8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#1A73E8" stop-opacity="0.0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Google Maps Canvas Background -->
+  <rect width="1200" height="675" fill="#F1F3F4" />
+  <rect width="1200" height="675" fill="url(#grid)" opacity="0.7" />
+
+  <!-- Main Warehouse Floor Card -->
+  <g transform="translate(140, 75)" filter="url(#shadow-lg)">
+    <!-- White Base Floor -->
+    <rect width="920" height="520" rx="16" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1.5" />
+    
+    <!-- Floor Grid Coordinate Labels Header -->
+    <g font-family="monospace" font-size="10" font-weight="600" fill="#70757A" text-anchor="middle">
+      <text x="65" y="24">A</text><text x="115" y="24">B</text><text x="165" y="24">C</text>
+      <text x="215" y="24">D</text><text x="265" y="24">E</text><text x="315" y="24">F</text>
+      <text x="365" y="24">G</text><text x="415" y="24">H</text><text x="465" y="24">I</text>
+      <text x="515" y="24">J</text><text x="565" y="24">K</text><text x="615" y="24">L</text>
+      <text x="665" y="24">M</text><text x="715" y="24">N</text><text x="765" y="24">O</text>
+      <text x="815" y="24">P</text>
+    </g>
+
+    <!-- Floor Canvas Area -->
+    <rect x="40" y="35" width="840" height="460" rx="12" fill="#F8F9FA" stroke="#DADCE0" stroke-width="1" />
+
+    <!-- Aisle Lanes Grid (Roadway style) -->
+    <g fill="#FFFFFF" stroke="#E8EAED" stroke-width="1">
+      <!-- White Road Aisle Background Cells -->
+      <rect x="44" y="39" width="832" height="452" rx="8" fill="#F8F9FA" />
+    </g>
+
+    <!-- Storage Rack Building Blocks (Google Maps Building Footprints) -->
+    <!-- Cluster 1: Left Racks -->
+    <g fill="#E8EAED" stroke="#BDC1C6" stroke-width="1">
+      <rect x="148" y="85" width="144" height="85" rx="4" />
+      <rect x="148" y="265" width="144" height="85" rx="4" />
+      <rect x="408" y="85" width="144" height="85" rx="4" />
+      <rect x="408" y="265" width="144" height="85" rx="4" />
+      <rect x="668" y="85" width="96" height="85" rx="4" />
+      <rect x="668" y="265" width="96" height="85" rx="4" />
+    </g>
+    <!-- Rack Shelf Line Markings -->
+    <g stroke="#9AA0A6" stroke-width="1" opacity="0.6">
+      <line x1="156" y1="113" x2="284" y2="113" /><line x1="156" y1="142" x2="284" y2="142" />
+      <line x1="156" y1="293" x2="284" y2="293" /><line x1="156" y1="322" x2="284" y2="322" />
+      <line x1="416" y1="113" x2="544" y2="113" /><line x1="416" y1="142" x2="544" y2="142" />
+      <line x1="416" y1="293" x2="544" y2="293" /><line x1="416" y1="322" x2="544" y2="322" />
+      <line x1="676" y1="113" x2="756" y2="113" /><line x1="676" y1="142" x2="756" y2="142" />
+      <line x1="676" y1="293" x2="756" y2="293" /><line x1="676" y1="322" x2="756" y2="322" />
+    </g>
+    <!-- Rack Text Labels -->
+    <g font-family="sans-serif" font-size="8" font-weight="600" fill="#70757A">
+      <text x="160" y="103">RACK BAY 01</text><text x="160" y="283">RACK BAY 02</text>
+      <text x="420" y="103">RACK BAY 03</text><text x="420" y="283">RACK BAY 04</text>
+      <text x="680" y="103">BAY 05</text><text x="680" y="283">BAY 06</text>
+    </g>
+
+    <!-- POI Stations on the Map -->
+    <!-- Picking Zones (Orange) -->
+    <g transform="translate(96, 85)">
+      <rect width="44" height="40" rx="6" fill="#FFF7ED" stroke="#FDBA74" />
+      <circle cx="22" cy="16" r="9" fill="#EA580C" />
+      <text x="22" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">P</text>
+      <text x="22" y="34" font-family="sans-serif" font-size="7" fill="#EA580C" font-weight="bold" text-anchor="middle">PICK A2</text>
+    </g>
+    <g transform="translate(304, 130)">
+      <rect width="44" height="40" rx="6" fill="#FFF7ED" stroke="#FDBA74" />
+      <circle cx="22" cy="16" r="9" fill="#EA580C" />
+      <text x="22" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">P</text>
+      <text x="22" y="34" font-family="sans-serif" font-size="7" fill="#EA580C" font-weight="bold" text-anchor="middle">PICK F3</text>
+    </g>
+    <g transform="translate(564, 85)">
+      <rect width="44" height="40" rx="6" fill="#FFF7ED" stroke="#FDBA74" />
+      <circle cx="22" cy="16" r="9" fill="#EA580C" />
+      <text x="22" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">P</text>
+      <text x="22" y="34" font-family="sans-serif" font-size="7" fill="#EA580C" font-weight="bold" text-anchor="middle">PICK K2</text>
+    </g>
+
+    <!-- Packing Stations (Google Blue) -->
+    <g transform="translate(356, 220)">
+      <rect width="44" height="40" rx="6" fill="#EFF6FF" stroke="#93C5FD" />
+      <circle cx="22" cy="16" r="9" fill="#1A73E8" />
+      <text x="22" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">K</text>
+      <text x="22" y="34" font-family="sans-serif" font-size="7" fill="#1A73E8" font-weight="bold" text-anchor="middle">PACK G5</text>
+    </g>
+    <g transform="translate(616, 220)">
+      <rect width="44" height="40" rx="6" fill="#EFF6FF" stroke="#93C5FD" />
+      <circle cx="22" cy="16" r="9" fill="#1A73E8" />
+      <text x="22" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">K</text>
+      <text x="22" y="34" font-family="sans-serif" font-size="7" fill="#1A73E8" font-weight="bold" text-anchor="middle">PACK L5</text>
+    </g>
+
+    <!-- Outbound Delivery Docks (Google Green) -->
+    <g transform="translate(772, 175)">
+      <rect width="48" height="40" rx="6" fill="#F0FDF4" stroke="#86EFAC" />
+      <circle cx="24" cy="16" r="9" fill="#1E8E3E" />
+      <text x="24" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">D</text>
+      <text x="24" y="34" font-family="sans-serif" font-size="7" fill="#1E8E3E" font-weight="bold" text-anchor="middle">DOCK O4</text>
+    </g>
+    <g transform="translate(772, 400)">
+      <rect width="48" height="40" rx="6" fill="#F0FDF4" stroke="#86EFAC" />
+      <circle cx="24" cy="16" r="9" fill="#1E8E3E" />
+      <text x="24" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">D</text>
+      <text x="24" y="34" font-family="sans-serif" font-size="7" fill="#1E8E3E" font-weight="bold" text-anchor="middle">DOCK O9</text>
+    </g>
+
+    <!-- EV Charging Stations (Amber) -->
+    <g transform="translate(44, 445)">
+      <rect width="44" height="40" rx="6" fill="#FEFCE8" stroke="#FDE047" />
+      <circle cx="22" cy="16" r="9" fill="#F59E0B" />
+      <text x="22" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">&#9889;</text>
+      <text x="22" y="34" font-family="sans-serif" font-size="7" fill="#B45309" font-weight="bold" text-anchor="middle">EV CHG 1</text>
+    </g>
+    <g transform="translate(96, 445)">
+      <rect width="44" height="40" rx="6" fill="#FEFCE8" stroke="#FDE047" />
+      <circle cx="22" cy="16" r="9" fill="#F59E0B" />
+      <text x="22" y="20" font-family="sans-serif" font-size="9" fill="#FFF" text-anchor="middle" font-weight="bold">&#9889;</text>
+      <text x="22" y="34" font-family="sans-serif" font-size="7" fill="#B45309" font-weight="bold" text-anchor="middle">EV CHG 2</text>
+    </g>
+
+    <!-- Navigation Routes (Google Maps Blue Polylines) -->
+    <!-- Route 1: Atlas R1 Route to Pick Station -->
+    <g>
+      <path d="M 68 62 L 118 62 L 118 105" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M 68 62 L 118 62 L 118 105" fill="none" stroke="#1A73E8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="118" cy="105" r="5" fill="#1A73E8" stroke="#FFF" stroke-width="1.5" />
+    </g>
+    <!-- Route 2: Titan R2 Route to Pack Station -->
+    <g>
+      <path d="M 378 175 L 378 240" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" />
+      <path d="M 378 175 L 378 240" fill="none" stroke="#0284C7" stroke-width="4.5" stroke-linecap="round" />
+      <circle cx="378" cy="240" r="5" fill="#0284C7" stroke="#FFF" stroke-width="1.5" />
+    </g>
+    <!-- Route 3: Valkyrie R3 Route to Delivery Dock -->
+    <g>
+      <path d="M 638 310 L 738 310 L 738 420 L 795 420" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M 638 310 L 738 310 L 738 420 L 795 420" fill="none" stroke="#7C3AED" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="795" cy="420" r="5" fill="#7C3AED" stroke="#FFF" stroke-width="1.5" />
+    </g>
+
+    <!-- Robot Location Beacons (Google Maps GPS Navigation Pucks) -->
+    <!-- R1: Atlas-01 -->
+    <g transform="translate(68, 62)">
+      <!-- Light Cone Heading East -->
+      <polygon points="0,0 45,-18 45,18" fill="url(#cone-blue)" opacity="0.6" />
+      <circle cx="0" cy="0" r="14" fill="#FFFFFF" filter="url(#shadow-sm)" stroke="#1A73E8" stroke-width="2" />
+      <circle cx="0" cy="0" r="9" fill="#1A73E8" />
+      <text x="0" y="3" font-family="sans-serif" font-size="8" fill="#FFF" font-weight="bold" text-anchor="middle">R1</text>
+      <!-- Agent Name Pill -->
+      <rect x="-24" y="-25" width="48" height="14" rx="4" fill="#202124" />
+      <text x="0" y="-15" font-family="sans-serif" font-size="8" fill="#FFF" font-weight="bold" text-anchor="middle">Atlas · 88%</text>
+    </g>
+
+    <!-- R2: Titan-02 -->
+    <g transform="translate(378, 175)">
+      <polygon points="0,0 -18,45 18,45" fill="url(#cone-blue)" opacity="0.5" />
+      <circle cx="0" cy="0" r="14" fill="#FFFFFF" filter="url(#shadow-sm)" stroke="#0284C7" stroke-width="2" />
+      <circle cx="0" cy="0" r="9" fill="#0284C7" />
+      <text x="0" y="3" font-family="sans-serif" font-size="8" fill="#FFF" font-weight="bold" text-anchor="middle">R2</text>
+      <rect x="-24" y="-25" width="48" height="14" rx="4" fill="#202124" />
+      <text x="0" y="-15" font-family="sans-serif" font-size="8" fill="#FFF" font-weight="bold" text-anchor="middle">Titan · 74%</text>
+    </g>
+
+    <!-- R3: Valkyrie-03 -->
+    <g transform="translate(638, 310)">
+      <polygon points="0,0 45,-18 45,18" fill="url(#cone-blue)" opacity="0.5" />
+      <circle cx="0" cy="0" r="14" fill="#FFFFFF" filter="url(#shadow-sm)" stroke="#7C3AED" stroke-width="2" />
+      <circle cx="0" cy="0" r="9" fill="#7C3AED" />
+      <text x="0" y="3" font-family="sans-serif" font-size="8" fill="#FFF" font-weight="bold" text-anchor="middle">R3</text>
+      <rect x="-28" y="-25" width="56" height="14" rx="4" fill="#202124" />
+      <text x="0" y="-15" font-family="sans-serif" font-size="8" fill="#FFF" font-weight="bold" text-anchor="middle">Valkyrie · 62%</text>
+    </g>
+
+    <!-- R4: Hermes-04 (Docked at Charger) -->
+    <g transform="translate(66, 465)">
+      <circle cx="0" cy="0" r="14" fill="#FFFFFF" filter="url(#shadow-sm)" stroke="#1E8E3E" stroke-width="2" />
+      <circle cx="0" cy="0" r="9" fill="#1E8E3E" />
+      <text x="0" y="3" font-family="sans-serif" font-size="8" fill="#FFF" font-weight="bold" text-anchor="middle">R4</text>
+      <rect x="-26" y="-25" width="52" height="14" rx="4" fill="#202124" />
+      <text x="0" y="-15" font-family="sans-serif" font-size="8" fill="#FFF" font-weight="bold" text-anchor="middle">Hermes · EV</text>
+    </g>
+  </g>
+
+  <!-- ==========================================
+       TOP-LEFT: GOOGLE MAPS FLOATING SEARCH PILL & FILTER CHIPS
+       ========================================== -->
+  <g transform="translate(24, 20)" filter="url(#shadow-md)">
+    <!-- Search Bar Card -->
+    <rect width="380" height="48" rx="24" fill="#FFFFFF" stroke="#DADCE0" />
+    <!-- Pin Icon -->
+    <circle cx="28" cy="24" r="14" fill="#E8F0FE" />
+    <path d="M 28 17 C 24.7 17 22 19.7 22 23 C 22 27.5 28 32 28 32 C 28 32 34 27.5 34 23 C 34 19.7 31.3 17 28 17 Z M 28 25 C 26.9 25 26 24.1 26 23 C 26 21.9 26.9 21 28 21 C 29.1 21 30 21.9 30 23 C 30 24.1 29.1 25 28 25 Z" fill="#1A73E8" />
+    
+    <text x="52" y="22" font-family="sans-serif" font-size="13" font-weight="bold" fill="#202124">RoboWare Fleet</text>
+    <text x="52" y="36" font-family="sans-serif" font-size="10" fill="#5F6368">Multi-Agent Autonomous Logistics</text>
+
+    <!-- Tick Badge -->
+    <rect x="220" y="16" width="68" height="18" rx="4" fill="#E8F0FE" />
+    <text x="254" y="29" font-family="monospace" font-size="10" font-weight="bold" fill="#1A73E8" text-anchor="middle">Tick #0142</text>
+
+    <!-- Algorithm Mode Button -->
+    <rect x="296" y="14" width="72" height="22" rx="11" fill="#1A73E8" />
+    <text x="332" y="29" font-family="sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Hybrid AI</text>
+  </g>
+
+  <!-- Filter Category Chips (Google Maps Style) -->
+  <g transform="translate(24, 76)">
+    <!-- Chip 1: Routes -->
+    <g filter="url(#shadow-sm)">
+      <rect width="82" height="28" rx="14" fill="#E8F0FE" stroke="#1A73E8" />
+      <circle cx="16" cy="14" r="4" fill="#1A73E8" />
+      <text x="48" y="18" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1A73E8" text-anchor="middle">Routes</text>
+    </g>
+    <!-- Chip 2: Q-Heatmap -->
+    <g transform="translate(90, 0)" filter="url(#shadow-sm)">
+      <rect width="94" height="28" rx="14" fill="#FFFFFF" stroke="#DADCE0" />
+      <text x="47" y="18" font-family="sans-serif" font-size="10" font-weight="500" fill="#3C4043" text-anchor="middle">Q-Heatmap</text>
+    </g>
+    <!-- Chip 3: Traffic Delays -->
+    <g transform="translate(192, 0)" filter="url(#shadow-sm)">
+      <rect width="98" height="28" rx="14" fill="#FFFFFF" stroke="#DADCE0" />
+      <text x="49" y="18" font-family="sans-serif" font-size="10" font-weight="500" fill="#3C4043" text-anchor="middle">Traffic Delays</text>
+    </g>
+    <!-- Chip 4: Grid Coords -->
+    <g transform="translate(298, 0)" filter="url(#shadow-sm)">
+      <rect width="80" height="28" rx="14" fill="#FFFFFF" stroke="#DADCE0" />
+      <text x="40" y="18" font-family="sans-serif" font-size="10" font-weight="500" fill="#3C4043" text-anchor="middle">A1 Grid</text>
+    </g>
+  </g>
+
+  <!-- ==========================================
+       TOP-RIGHT: LIVE FLEET DISPATCH DRAWER & KPI STRIP
+       ========================================== -->
+  <g transform="translate(850, 20)" filter="url(#shadow-md)">
+    <!-- KPI Summary Pill -->
+    <rect width="326" height="40" rx="20" fill="#FFFFFF" stroke="#DADCE0" />
+    <circle cx="20" cy="20" r="4" fill="#1E8E3E" />
+    <text x="48" y="24" font-family="sans-serif" font-size="11" font-weight="bold" fill="#202124">18 Done</text>
+    <line x1="86" y1="12" x2="86" y2="28" stroke="#DADCE0" />
+
+    <circle cx="106" cy="20" r="4" fill="#FBBC04" />
+    <text x="136" y="24" font-family="sans-serif" font-size="11" font-weight="bold" fill="#202124">0 Yield</text>
+    <line x1="172" y1="12" x2="172" y2="28" stroke="#DADCE0" />
+
+    <circle cx="192" cy="20" r="4" fill="#1A73E8" />
+    <text x="230" y="24" font-family="sans-serif" font-size="11" font-weight="bold" fill="#202124">1/3 Chargers</text>
+
+    <!-- Dispatch Button -->
+    <rect x="264" y="8" width="54" height="24" rx="12" fill="#1A73E8" />
+    <text x="291" y="24" font-family="sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">+ Order</text>
+  </g>
+
+  <!-- Live Trip Itinerary Card (Top Right) -->
+  <g transform="translate(850, 72)" filter="url(#shadow-lg)">
+    <rect width="326" height="210" rx="16" fill="#FFFFFF" stroke="#DADCE0" />
+    <text x="16" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#202124">Active Trip Itinerary</text>
+    <text x="16" y="38" font-family="sans-serif" font-size="10" fill="#5F6368">4 Autonomous AGVs in Route</text>
+
+    <!-- Item 1 -->
+    <g transform="translate(14, 50)">
+      <rect width="298" height="44" rx="8" fill="#F8F9FA" stroke="#E8EAED" />
+      <text x="10" y="16" font-family="sans-serif" font-size="11" font-weight="bold" fill="#202124">ORD-101 · Micro-Servo</text>
+      <text x="10" y="32" font-family="monospace" font-size="9" fill="#1A73E8">● Pick A2 ── ○ Pack G5 ── ◆ Dock O9</text>
+      <rect x="238" y="10" width="50" height="18" rx="9" fill="#1A73E8" />
+      <text x="263" y="22" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFF" text-anchor="middle">Atlas R1</text>
+    </g>
+    <!-- Item 2 -->
+    <g transform="translate(14, 102)">
+      <rect width="298" height="44" rx="8" fill="#F8F9FA" stroke="#E8EAED" />
+      <text x="10" y="16" font-family="sans-serif" font-size="11" font-weight="bold" fill="#202124">ORD-102 · LiDAR Sensor</text>
+      <text x="10" y="32" font-family="monospace" font-size="9" fill="#0284C7">● Pick F3 ── ○ Pack G5 ── ◆ Dock O4</text>
+      <rect x="238" y="10" width="50" height="18" rx="9" fill="#0284C7" />
+      <text x="263" y="22" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFF" text-anchor="middle">Titan R2</text>
+    </g>
+    <!-- Item 3 -->
+    <g transform="translate(14, 154)">
+      <rect width="298" height="44" rx="8" fill="#F8F9FA" stroke="#E8EAED" />
+      <text x="10" y="16" font-family="sans-serif" font-size="11" font-weight="bold" fill="#202124">ORD-103 · EV Lithium Pack</text>
+      <text x="10" y="32" font-family="monospace" font-size="9" fill="#7C3AED">● Pick K2 ── ○ Pack L5 ── ◆ Dock O9</text>
+      <rect x="238" y="10" width="50" height="18" rx="9" fill="#7C3AED" />
+      <text x="263" y="22" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFF" text-anchor="middle">Valkyrie R3</text>
+    </g>
+  </g>
+
+  <!-- ==========================================
+       BOTTOM-CENTER: GOOGLE MAPS NAVIGATION BANNER & PLAYBACK DOCK
+       ========================================== -->
+  <g transform="translate(360, 610)" filter="url(#shadow-lg)">
+    <rect width="480" height="48" rx="24" fill="#FFFFFF" stroke="#DADCE0" />
+    
+    <!-- Active Agent Icon -->
+    <circle cx="28" cy="24" r="14" fill="#1A73E8" />
+    <text x="28" y="28" font-family="sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">R1</text>
+
+    <!-- Turn Instruction -->
+    <text x="52" y="21" font-family="sans-serif" font-size="11" font-weight="bold" fill="#202124">In 2 cells, arrive at Pick Station [A2]</text>
+    <text x="52" y="35" font-family="sans-serif" font-size="9" fill="#5F6368">Atlas-01 · 88% Battery · Shortest A* Trajectory</text>
+
+    <!-- Play/Pause Google Button -->
+    <circle cx="340" cy="24" r="15" fill="#1A73E8" />
+    <polygon points="336,19 336,29 346,24" fill="#FFFFFF" />
+
+    <!-- Step Button -->
+    <circle cx="380" cy="24" r="12" fill="#F1F3F4" />
+    <path d="M 376 19 L 382 24 L 376 29 M 383 19 L 383 29" stroke="#3C4043" stroke-width="1.5" fill="none" />
+
+    <!-- Reset Button -->
+    <circle cx="410" cy="24" r="12" fill="#F1F3F4" />
+    <path d="M 407 20 A 4 4 0 1 1 406 25" stroke="#3C4043" stroke-width="1.5" fill="none" />
+
+    <!-- 1x Speed Pill -->
+    <rect x="432" y="14" width="36" height="20" rx="10" fill="#F1F3F4" />
+    <text x="450" y="28" font-family="monospace" font-size="9" font-weight="bold" fill="#1A73E8" text-anchor="middle">1x</text>
+  </g>
+
+  <!-- ==========================================
+       BOTTOM-RIGHT: GOOGLE MAPS ZOOM & RECENTER CONTROLS
+       ========================================== -->
+  <g transform="translate(1140, 560)" filter="url(#shadow-md)">
+    <rect width="36" height="72" rx="18" fill="#FFFFFF" stroke="#DADCE0" />
+    <text x="18" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#3C4043" text-anchor="middle">+</text>
+    <line x1="8" y1="36" x2="28" y2="36" stroke="#DADCE0" />
+    <text x="18" y="56" font-family="sans-serif" font-size="18" font-weight="bold" fill="#3C4043" text-anchor="middle">−</text>
+  </g>
+
+  <!-- ==========================================
+       BOTTOM-LEFT: GOOGLE MAPS LAYERS BUTTON
+       ========================================== -->
+  <g transform="translate(24, 615)" filter="url(#shadow-md)">
+    <rect width="140" height="38" rx="19" fill="#FFFFFF" stroke="#DADCE0" />
+    <circle cx="22" cy="19" r="10" fill="#E8F0FE" />
+    <path d="M 22 13 L 28 17 L 22 21 L 16 17 Z M 16 20 L 22 24 L 28 20" stroke="#1A73E8" stroke-width="1.2" fill="none" />
+    <text x="40" y="23" font-family="sans-serif" font-size="11" font-weight="500" fill="#3C4043">Map Layers</text>
+  </g>
+</svg>

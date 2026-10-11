@@ -39,7 +39,8 @@ import {
   ArrowUp,
   ArrowDown,
   ArrowLeft,
-  ArrowRight
+  ArrowRight,
+  Image as ImageIcon
 } from 'lucide-react';
 
 // ==========================================
@@ -234,6 +235,7 @@ export default function App() {
   const [selectedRobotId, setSelectedRobotId] = useState<string>('R1');
   const [isOrdersDrawerOpen, setIsOrdersDrawerOpen] = useState<boolean>(true);
   const [isInspectorOpen, setIsInspectorOpen] = useState<boolean>(false);
+  const [showImageGallery, setShowImageGallery] = useState<boolean>(false);
   const [autoDispatch, setAutoDispatch] = useState<boolean>(true);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -1514,6 +1516,18 @@ export default function App() {
             <Sliders className="w-3.5 h-3.5" />
             <span>AI Brain Inspector</span>
           </button>
+
+          <button
+            onClick={() => setShowImageGallery(v => !v)}
+            className={`px-3 py-1.5 rounded-full border transition-all flex items-center gap-1.5 whitespace-nowrap shadow-xs ${
+              showImageGallery
+                ? 'bg-[#E8F0FE] border-[#1A73E8] text-[#1A73E8] font-medium'
+                : 'bg-white border-[#DADCE0] hover:bg-[#F8F9FA]'
+            }`}
+          >
+            <ImageIcon className="w-3.5 h-3.5" />
+            <span>Repo UI Images</span>
+          </button>
         </div>
       </header>
 
@@ -2132,6 +2146,91 @@ export default function App() {
             </button>
           </div>
         </aside>
+      )}
+
+      {/* ==========================================
+          MODAL: REPOSITORY UI IMAGES PREVIEW
+          ========================================== */}
+      {showImageGallery && (
+        <div className="fixed inset-0 z-50 bg-[#202124]/40 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl gmaps-card-raised p-5 max-w-4xl w-full max-h-[90vh] flex flex-col gap-4 shadow-2xl border border-[#DADCE0]">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between pb-3 border-b border-[#DADCE0]">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-[#E8F0FE] text-[#1A73E8] flex items-center justify-center">
+                  <ImageIcon className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-[#202124]">Repository UI Images</h3>
+                  <p className="text-xs text-[#5F6368]">
+                    Generated high-resolution graphics saved in <code className="text-[#1A73E8] font-mono text-[11px]">docs/images/</code> for GitHub README documentation
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setShowImageGallery(false)}
+                className="w-8 h-8 rounded-full hover:bg-[#F1F3F4] text-[#5F6368] flex items-center justify-center"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Gallery Image List */}
+            <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col gap-6 pr-2">
+              {/* Image 1: Main Floor Map Overview */}
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-xs font-bold text-[#202124]">1. Warehouse Fleet &amp; Google Maps Operations</h4>
+                    <span className="text-[11px] text-[#5F6368] font-mono">docs/images/roboware-ui-overview.svg (1200×675)</span>
+                  </div>
+                  <a
+                    href="/images/roboware-ui-overview.svg"
+                    download="roboware-ui-overview.svg"
+                    className="gmaps-btn px-2.5 py-1 rounded-lg text-xs font-medium flex items-center gap-1.5 text-[#1A73E8]"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Download SVG</span>
+                  </a>
+                </div>
+                <div className="rounded-xl border border-[#DADCE0] overflow-hidden bg-[#F1F3F4] p-1 shadow-xs">
+                  <img
+                    src="/images/roboware-ui-overview.svg"
+                    alt="RoboWare Warehouse Fleet UI Overview"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-auto rounded-lg shadow-sm"
+                  />
+                </div>
+              </div>
+
+              {/* Image 2: Agent Brain Inspector */}
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-xs font-bold text-[#202124]">2. Agent Intelligence &amp; Q-Learning Inspector</h4>
+                    <span className="text-[11px] text-[#5F6368] font-mono">docs/images/roboware-agent-brain.svg (800×600)</span>
+                  </div>
+                  <a
+                    href="/images/roboware-agent-brain.svg"
+                    download="roboware-agent-brain.svg"
+                    className="gmaps-btn px-2.5 py-1 rounded-lg text-xs font-medium flex items-center gap-1.5 text-[#1A73E8]"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Download SVG</span>
+                  </a>
+                </div>
+                <div className="rounded-xl border border-[#DADCE0] overflow-hidden bg-[#F1F3F4] p-1 shadow-xs">
+                  <img
+                    src="/images/roboware-agent-brain.svg"
+                    alt="RoboWare Agent Brain Inspector"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-auto rounded-lg shadow-sm"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

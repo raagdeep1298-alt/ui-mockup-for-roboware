@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="brain-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#3c4043" flood-opacity="0.16" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="#F1F3F4" />
+
+  <g transform="translate(40, 30)" filter="url(#brain-shadow)">
+    <rect width="720" height="540" rx="20" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1.5" />
+
+    <g transform="translate(24, 20)">
+      <circle cx="20" cy="20" r="18" fill="#E8F0FE" />
+      <path d="M 14 14 H 26 V 26 H 14 Z M 16 16 V 24 H 24 V 16 Z" fill="#1A73E8" />
+      <text x="48" y="18" font-family="sans-serif" font-size="16" font-weight="bold" fill="#202124">Agent Intelligence Inspector</text>
+      <text x="48" y="34" font-family="sans-serif" font-size="11" fill="#5F6368">Reinforcement Learning Policy &amp; Bellman Equation Decision Matrix</text>
+    </g>
+
+    <g transform="translate(24, 80)">
+      <rect width="672" height="42" rx="12" fill="#F1F3F4" />
+      <rect x="4" y="4" width="160" height="34" rx="8" fill="#FFFFFF" stroke="#DADCE0" />
+      <circle cx="24" cy="21" r="5" fill="#1A73E8" />
+      <text x="36" y="25" font-family="sans-serif" font-size="12" font-weight="bold" fill="#202124">Atlas-01 (R1)</text>
+
+      <circle cx="196" cy="21" r="5" fill="#0284C7" />
+      <text x="208" y="25" font-family="sans-serif" font-size="12" font-weight="500" fill="#5F6368">Titan-02 (R2)</text>
+
+      <circle cx="364" cy="21" r="5" fill="#7C3AED" />
+      <text x="376" y="25" font-family="sans-serif" font-size="12" font-weight="500" fill="#5F6368">Valkyrie-03 (R3)</text>
+
+      <circle cx="532" cy="21" r="5" fill="#1E8E3E" />
+      <text x="544" y="25" font-family="sans-serif" font-size="12" font-weight="500" fill="#5F6368">Hermes-04 (R4)</text>
+    </g>
+
+    <g transform="translate(24, 138)">
+      <rect width="672" height="74" rx="12" fill="#F8F9FA" stroke="#E8EAED" />
+      <text x="16" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#202124">Active Telemetry · Atlas-01</text>
+      <text x="16" y="44" font-family="sans-serif" font-size="11" fill="#5F6368">Grid Location: <tspan font-family="monospace" font-weight="bold" fill="#1A73E8">[B2] (1, 1)</tspan> · Status: <tspan font-weight="bold" fill="#202124">Picking</tspan> · Battery: <tspan font-weight="bold" fill="#1E8E3E">88% (Nominal)</tspan></text>
+      <text x="16" y="62" font-family="sans-serif" font-size="11" fill="#5F6368">Navigation Goal: <tspan font-family="monospace" font-weight="bold" fill="#202124">Picking Station [A2] (0, 1)</tspan> · Payload: <tspan font-weight="bold" fill="#D97706">Empty</tspan></text>
+    </g>
+
+    <g transform="translate(24, 224)">
+      <rect width="672" height="48" rx="10" fill="#E8F0FE" />
+      <circle cx="22" cy="24" r="8" fill="#1A73E8" />
+      <text x="22" y="28" font-family="sans-serif" font-size="10" fill="#FFF" font-weight="bold" text-anchor="middle">i</text>
+      <text x="40" y="22" font-family="sans-serif" font-size="11" font-weight="bold" fill="#174EA6">Hybrid Intelligence Active</text>
+      <text x="40" y="37" font-family="sans-serif" font-size="10" fill="#174EA6">A* search identifies macro topological shortest path; Q-table reinforcement updates local action scores with +10.0 reward on goal arrival.</text>
+    </g>
+
+    <g transform="translate(24, 286)">
+      <g>
+        <text x="0" y="16" font-family="sans-serif" font-size="12" font-weight="bold" fill="#202124">Action Q-Values @ Current Tile</text>
+        <text x="0" y="32" font-family="sans-serif" font-size="10" fill="#1E8E3E" font-weight="bold">Optimal Greedy Policy: EAST ▶ (+8.42)</text>
+
+        <g transform="translate(40, 48)">
+          <rect x="65" y="0" width="80" height="42" rx="8" fill="#FFFFFF" stroke="#DADCE0" />
+          <text x="105" y="18" font-family="sans-serif" font-size="9" fill="#70757A" text-anchor="middle">▲ NORTH</text>
+          <text x="105" y="34" font-family="monospace" font-size="12" font-weight="bold" fill="#202124" text-anchor="middle">0.45</text>
+
+          <rect x="0" y="52" width="80" height="42" rx="8" fill="#FFFFFF" stroke="#DADCE0" />
+          <text x="40" y="70" font-family="sans-serif" font-size="9" fill="#70757A" text-anchor="middle">◀ WEST</text>
+          <text x="40" y="86" font-family="monospace" font-size="12" font-weight="bold" fill="#202124" text-anchor="middle">-1.20</text>
+
+          <circle cx="105" cy="73" r="16" fill="#F1F3F4" stroke="#DADCE0" />
+          <text x="105" y="77" font-family="monospace" font-size="10" font-weight="bold" fill="#70757A" text-anchor="middle">B2</text>
+
+          <rect x="130" y="52" width="80" height="42" rx="8" fill="#E6F4EA" stroke="#1E8E3E" stroke-width="1.5" />
+          <text x="170" y="70" font-family="sans-serif" font-size="9" font-weight="bold" fill="#137333" text-anchor="middle">EAST ▶</text>
+          <text x="170" y="86" font-family="monospace" font-size="12" font-weight="bold" fill="#137333" text-anchor="middle">+8.42</text>
+
+          <rect x="65" y="104" width="80" height="42" rx="8" fill="#FFFFFF" stroke="#DADCE0" />
+          <text x="105" y="122" font-family="sans-serif" font-size="9" fill="#70757A" text-anchor="middle">▼ SOUTH</text>
+          <text x="105" y="138" font-family="monospace" font-size="12" font-weight="bold" fill="#202124" text-anchor="middle">1.10</text>
+        </g>
+      </g>
+
+      <g transform="translate(360, 0)">
+        <text x="0" y="16" font-family="sans-serif" font-size="12" font-weight="bold" fill="#202124">Reinforcement Hyperparameters</text>
+        
+        <g transform="translate(0, 32)">
+          <text x="0" y="12" font-family="sans-serif" font-size="11" fill="#5F6368">Learning Rate (α): <tspan font-family="monospace" font-weight="bold" fill="#202124">0.10</tspan></text>
+          <rect x="0" y="20" width="312" height="6" rx="3" fill="#E8EAED" />
+          <rect x="0" y="20" width="80" height="6" rx="3" fill="#1A73E8" />
+          <circle cx="80" cy="23" r="7" fill="#1A73E8" stroke="#FFF" stroke-width="2" />
+        </g>
+
+        <g transform="translate(0, 72)">
+          <text x="0" y="12" font-family="sans-serif" font-size="11" fill="#5F6368">Discount Factor (γ): <tspan font-family="monospace" font-weight="bold" fill="#202124">0.95</tspan></text>
+          <rect x="0" y="20" width="312" height="6" rx="3" fill="#E8EAED" />
+          <rect x="0" y="20" width="280" height="6" rx="3" fill="#1A73E8" />
+          <circle cx="280" cy="23" r="7" fill="#1A73E8" stroke="#FFF" stroke-width="2" />
+        </g>
+
+        <g transform="translate(0, 112)">
+          <text x="0" y="12" font-family="sans-serif" font-size="11" fill="#5F6368">Exploration Rate (ε): <tspan font-family="monospace" font-weight="bold" fill="#202124">0.30</tspan></text>
+          <rect x="0" y="20" width="312" height="6" rx="3" fill="#E8EAED" />
+          <rect x="0" y="20" width="120" height="6" rx="3" fill="#1A73E8" />
+          <circle cx="120" cy="23" r="7" fill="#1A73E8" stroke="#FFF" stroke-width="2" />
+        </g>
+
+        <g transform="translate(0, 160)">
+          <rect width="150" height="34" rx="8" fill="#FFFFFF" stroke="#DADCE0" />
+          <text x="75" y="22" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8" text-anchor="middle">Export Model JSON</text>
+
+          <rect x="162" y="0" width="150" height="34" rx="8" fill="#FFFFFF" stroke="#DADCE0" />
+          <text x="237" y="22" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8" text-anchor="middle">Import Model JSON</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
